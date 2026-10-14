@@ -5,7 +5,7 @@ message: >-
 title: Arabic Agent Reliability Lab
 type: software
 version: 0.2.0
-date-released: 2026-08-05
+date-released: 2026-10-14
 authors:
   - name: Bayanat Labs
 license: Apache-2.0
