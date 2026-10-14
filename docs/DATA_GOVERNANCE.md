@@ -1,6 +1,6 @@
 # Data governance and release policy (v0)
 
-> Status: engineering/research preview. This document is operational guidance, not legal advice; counsel review is required before a public benchmark launch.
+> Status: engineering and research preview. This document is operational guidance, not legal advice.
 
 ## Scope and permitted claims
 
@@ -46,11 +46,11 @@ Reports distinguish deterministic rule metrics, model-assisted judgments, native
 - Rights-cleared open scenario data: CC BY 4.0, as identified by `SCENARIO_LICENSE.md`.
 - Excluded: held-out material, third-party datasets, model weights/tokenizers, provider-governed outputs, trademarks, personal data, and confidential/customer material.
 
-Every public release requires a license inventory, complete Apache `LICENSE` and notices, immutable version tag, checksummed manifest, dataset card, system cards, and changelog.
+Every public release requires a license inventory, complete Apache `LICENSE` and notices, immutable version tag, checksummed manifest, dataset card, a disclosed system snapshot for every reported system, and changelog.
 
 ## Release gate
 
-A public research launch is no-go until:
+The methods beta (the v0.1 receipts and this repository) is published as an engineering preview under the limits stated in README.md. An official benchmark result, a held-out score, or any dialect claim is no-go until:
 
 - all headline claims map to reproducible results and disclose uncertainty;
 - clean-machine tests and local replay pass;
@@ -60,6 +60,5 @@ A public research launch is no-go until:
 - open and held-out materials are physically separated;
 - methodology and limitations are published in Arabic and English;
 - domain, email, repository, model-hub, correction, and takedown contacts work;
-- counsel reviews licensing, consent, privacy, and high-risk content;
 - a named release owner signs the final go/no-go decision.
 

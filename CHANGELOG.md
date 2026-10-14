@@ -58,8 +58,11 @@ fresh tree without the development history. Changes compared with that commit:
 - `docs/BENCHMARK_SPEC.md`: replaced 24 em dashes with colons, parentheses or
   commas, and updated the local-configurations row to cover more than one
   Ollama model. The wording is otherwise unchanged.
-- `docs/DATA_GOVERNANCE.md`: replaced the em dash in the title. Nothing else
-  changed, including the release gate.
+- `docs/DATA_GOVERNANCE.md`: replaced the em dash in the title. The status line
+  no longer requires counsel review, "system cards" is now a disclosed system
+  snapshot for every reported system, and the release gate now covers official
+  benchmark results, held-out scores and dialect claims. This repository and the
+  v0.1 receipts are published as an engineering preview.
 - `docs/DATASET_CARD.md`: the project name is now "Arabic Agent Reliability Lab
   by Bayanat Labs", and reports go to hello@bayanatlabs.com.
 - `docs/LICENSE_INVENTORY.md`: added a row for the methods-beta receipts
