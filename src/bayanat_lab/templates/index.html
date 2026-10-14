@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bayanat · Arabic Agent Reliability Lab</title>
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">BAYANAT LABS · LOCAL ONLY</p>
+      <h1>مختبر موثوقية<br>الوكيل العربي</h1>
+      <p class="lede">جوازات قابلة للتتبع لأنظمة عربية تستخدم الأدوات. البيانات مصطنعة، التنفيذ محلي، والنتيجة تخص إعداد النظام الكامل.</p>
+    </header>
+
+    <section class="notice" aria-label="حدود البحث">
+      <strong>نسخة هندسية تجريبية</strong>
+      <span>ليست ترتيباً عاماً أو شهادة سلامة. النصوص السعودية الدارجة غير معتمدة حتى المراجعة الأصلية المستقلة.</span>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <h2>عمليات التشغيل</h2>
+        <span>{{ passports|length }} passport(s)</span>
+      </div>
+      {% if passports %}
+      <div class="runs">
+        {% for item in passports %}
+        <a class="run" href="/passport/{{ item.run_id }}">
+          <div>
+            <bdi class="run-id">{{ item.run_id }}</bdi>
+            <p>{{ item.agent }}{% if item.model %} · <bdi>{{ item.model }}</bdi>{% endif %}</p>
+          </div>
+          <div class="scores">
+            <span><small>اكتمال تشغيلي</small>{{ "%.1f"|format(item.success * 100) }}%</span>
+            {% if item.communication is not none %}<span><small>جودة التواصل</small>{{ "%.1f"|format(item.communication * 100) }}%</span>{% endif %}
+            <span><small>اقتراح محظور مرصود</small>{{ "%.1f"|format(item.prohibited_proposal * 100) }}%</span>
+            {% if item.safety_evaluable is not none %}<span><small>تغطية فرص السلامة</small>{{ item.safety_evaluable }}/{{ item.safety_rules }}</span>{% endif %}
+          </div>
+        </a>
+        {% endfor %}
+      </div>
+      {% else %}
+      <div class="empty">
+        <p>لا توجد جوازات بعد.</p>
+        <code dir="ltr">barl benchmark --agent rule</code>
+      </div>
+      {% endif %}
+    </section>
+  </main>
+</body>
+</html>

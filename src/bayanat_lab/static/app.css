@@ -1,0 +1,52 @@
+:root {
+  color-scheme: dark;
+  --background: #07100c;
+  --surface: #121a16;
+  --surface-2: #18231d;
+  --ink: #f0f4ec;
+  --muted: #9ba99f;
+  --line: #2a3a31;
+  --accent: #b8ef48;
+  --danger: #ff756f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 5%, rgba(184, 239, 72, .09), transparent 28rem),
+    var(--background);
+  color: var(--ink);
+  font-family: Tahoma, "Segoe UI", sans-serif;
+}
+
+main { width: min(1120px, 92vw); margin: 0 auto; padding: 64px 0 96px; }
+header { padding: 24px 0 36px; }
+.eyebrow { color: var(--accent); font: 700 .78rem/1.4 "Segoe UI"; letter-spacing: .16em; }
+h1 { margin: .28em 0; font-size: clamp(3rem, 9vw, 7.4rem); line-height: .92; letter-spacing: -.055em; }
+.lede { max-width: 65ch; color: var(--muted); font-size: 1.12rem; line-height: 1.85; }
+.notice { display: grid; grid-template-columns: 14rem 1fr; gap: 22px; margin: 18px 0 60px; padding: 20px 24px; border: 1px solid #52612f; border-radius: 16px; background: rgba(184, 239, 72, .05); }
+.notice strong { color: var(--accent); }
+.notice span { color: var(--muted); }
+.section-title { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--line); }
+.section-title h2 { font-size: 1.45rem; }
+.section-title span { color: var(--muted); direction: ltr; }
+.runs { display: grid; gap: 12px; padding-top: 16px; }
+.run { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 24px; color: inherit; text-decoration: none; padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface); transition: border-color .15s, transform .15s; }
+.run:hover { border-color: var(--accent); transform: translateY(-2px); }
+.run-id { direction: ltr; font: 650 1rem/1.4 "Segoe UI"; overflow-wrap: anywhere; }
+.run p { margin: 7px 0 0; color: var(--muted); }
+.scores { display: flex; gap: 12px; direction: ltr; }
+.scores span { min-width: 92px; padding: 12px; border-radius: 12px; background: var(--surface-2); font: 700 1.2rem/1 "Segoe UI"; text-align: right; }
+.scores small { display: block; margin-bottom: 8px; color: var(--muted); font: 400 .72rem/1 Tahoma; direction: rtl; }
+.empty { margin-top: 16px; padding: 42px; border: 1px dashed var(--line); border-radius: 18px; text-align: center; color: var(--muted); }
+.empty code { display: inline-block; padding: 10px 14px; border-radius: 9px; background: #050905; color: var(--accent); }
+
+@media (max-width: 700px) {
+  main { padding-top: 30px; }
+  .notice, .run { grid-template-columns: 1fr; }
+  .scores { justify-content: flex-start; }
+}
+
