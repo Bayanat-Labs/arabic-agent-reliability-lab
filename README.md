@@ -6,6 +6,8 @@ The Arabic Agent Reliability Lab is a fully local harness for testing Arabic AI 
 
 [Project page](https://www.bayanatlabs.com/research/arabic-agent-reliability) · Methods beta · Code under Apache-2.0 · Open scenarios and receipts under CC BY 4.0
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23355782.svg)](https://doi.org/10.5281/zenodo.23355782)
+
 > **Research status:** v0 is an engineering and methodology preview, not a representative leaderboard. Dialect examples are labeled `unvalidated` until independent, dialect-matched native review is complete. Scores describe the tested whole-system configuration, not the underlying model in isolation.
 
 ## Quick start
@@ -202,8 +204,9 @@ The detailed artifact-by-artifact boundaries are in the
 
 If you use the lab or its open scenarios in research or engineering work, please
 cite this release and name the exact suite and system versions you used. GitHub's
-"Cite this repository" button reads [CITATION.cff](CITATION.cff). A Zenodo DOI
-will be listed here after the first tagged release.
+"Cite this repository" button reads [CITATION.cff](CITATION.cff).
+
+DOI for all versions: [10.5281/zenodo.23355782](https://doi.org/10.5281/zenodo.23355782). This release (v0.2.0): [10.5281/zenodo.23355783](https://doi.org/10.5281/zenodo.23355783).
 
 ## Contact
 
